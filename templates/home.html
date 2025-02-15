@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Welcome to Refuge Connect</title>
+</head>
+<body>
+    
+    <div class="container mt-5">
+        <h1>Welcome to Anza Tena</h1>
+        <p>We are here to assist and support refugees in starting life a new </p>
+        
+        <!-- User Registration -->
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="userName">Name:</label>
+                <input type="text" class="form-control" id="userName" required>
+            </div>
+            <div class="form-group">
+                <label for="userRole">Role:</label>
+                <input type="text" class="form-control" id="userRole" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Register User</button>
+        </form>
+
+        <h2 class="mt-5">Emergency Response</h2>
+        <form id="emergencyForm">
+            <div class="form-group">
+                <label for="emergencyTitle">Title:</label>
+                <input type="text" class="form-control" id="emergencyTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="emergencyDescription">Description:</label>
+                <textarea class="form-control" id="emergencyDescription" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="emergencyLocation">Location:</label>
+                <input type="text" class="form-control" id="emergencyLocation" required>
+            </div>
+            <div class="form-group">
+                <label for="contactInfo">Contact Info:</label>
+                <input type="text" class="form-control" id="contactInfo" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Report Emergency</button>
+        </form>
+
+        <!-- Add similar forms and sections for Resource Distribution, Volunteer Management, Healthcare Services, and Legal Aid -->
+
+        <h2 class="mt-5">Registered Users</h2>
+        <ul id="userList" class="list-group mt-3"></ul>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
