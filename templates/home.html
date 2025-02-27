@@ -3,56 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Welcome to Refuge Connect</title>
 </head>
 <body>
-    
-    <div class="container mt-5">
-        <h1>Welcome to Anza Tena</h1>
-        <p>We are here to assist and support refugees in starting life a new </p>
-        
-        <!-- User Registration -->
-        <form id="registrationForm">
-            <div class="form-group">
-                <label for="userName">Name:</label>
-                <input type="text" class="form-control" id="userName" required>
+    <div class="container-fluid p-0">
+        <!-- Background Image -->
+        <div class="bg-image" style="background-image: url('https://img.freepik.com/premium-photo/illustration-refugees-generative-ai_756405-3105.jpg'); height: 100vh; background-size: cover; background-position: center; position: relative;">
+            <div class="overlay"></div>
+            <div class="content text-center text-white" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <h1>Welcome to Refuge Connect</h1>
+                <p class="lead">Your centralized system for managing refugee crises.</p>
+                <a href="#features" class="btn btn-primary btn-lg">Explore Features</a>
             </div>
-            <div class="form-group">
-                <label for="userRole">Role:</label>
-                <input type="text" class="form-control" id="userRole" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Register User</button>
-        </form>
+        </div>
 
-        <h2 class="mt-5">Emergency Response</h2>
-        <form id="emergencyForm">
-            <div class="form-group">
-                <label for="emergencyTitle">Title:</label>
-                <input type="text" class="form-control" id="emergencyTitle" required>
+        <!-- Features Section -->
+        <div id="features" class="container mt-5">
+            <h2 class="text-center mb-4">Our Features</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Emergency Response Coordination</h5>
+                            <p class="card-text">Manage rescue teams and receive crisis alerts efficiently.</p>
+                            <a href="#" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Confidential Shelters</h5>
+                            <p class="card-text">Find safe shelters for refugees in need of protection.</p>
+                            <a href="#" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Resource Distribution</h5>
+                            <p class="card-text">Coordinate distribution of food, water, clothing, and medical supplies.</p>
+                            <a href="#" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="emergencyDescription">Description:</label>
-                <textarea class="form-control" id="emergencyDescription" required></textarea>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Volunteer Management</h5>
+                            <p class="card-text">Organize volunteers to support education and shelter needs.</p>
+                            <a href="#" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Protection Services</h5>
+                            <p class="card-text">Ensure the safety of women and children from abuse.</p>
+                            <a href="#" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Healthcare Services</h5>
+                            <p class="card-text">Access healthcare appointments and medical aid.</p>
+                            <a href="#" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="emergencyLocation">Location:</label>
-                <input type="text" class="form-control" id="emergencyLocation" required>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Legal & Documentation Support</h5>
+                            <p class="card-text">Receive help with ID processing and asylum applications.</p>
+                            <a href="#" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="contactInfo">Contact Info:</label>
-                <input type="text" class="form-control" id="contactInfo" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Report Emergency</button>
-        </form>
-
-        <!-- Add similar forms and sections for Resource Distribution, Volunteer Management, Healthcare Services, and Legal Aid -->
-
-        <h2 class="mt-5">Registered Users</h2>
-        <ul id="userList" class="list-group mt-3"></ul>
+        </div>
     </div>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
